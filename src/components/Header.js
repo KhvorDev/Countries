@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Container from './Container';
 import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IoMoon } from 'react-icons/io5';
 
 
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled(Link).attrs({
-    to: '/',
+    to: '/countries',
 })`
     color: var(--colors-text);
     font-size: (--fs-sm);
@@ -54,8 +54,8 @@ function Header() {
                 <Wrapper>
                     <Title>Where is the world?</Title>
                     <ThemeSwitcher onClick={toggleTheme}>
-                        <IoMoon size='14px'/>
-                        <span style={{marginLeft: '0.75rem'}}>{theme === 'light' ? 'dark' : 'light'} Theme</span>
+                        <IoMoon size='14px' />
+                        <span style={{ marginLeft: '0.75rem' }}>{theme === 'light' ? 'dark' : 'light'} Theme</span>
                     </ThemeSwitcher>
                 </Wrapper>
             </Container>
